@@ -1,10 +1,12 @@
-# Chiediamo le informazioni all'utente
+import datetime  # Importiamo la libreria per gestire le date
+
+# Otteniamo l'anno corrente in automatico
+anno_attuale = datetime.datetime.now().year
+
 nome = input("Come ti chiami? ")
-eta = input("Quanti anni hai? ")
+eta = int(input("Quanti anni hai? "))
 
-# Trasformiamo l'età in un numero (per poter fare i calcoli)
-eta_numerica = int(eta)
-anni_mancanti = 100 - eta_numerica
+anni_al_centenario = 100 - eta
+anno_del_centenario = anno_attuale + anni_al_centenario
 
-# Stampiamo il risultato
-print(f"Ciao {nome}! Ti mancano {anni_mancanti} anni per arrivare a 100!")
+print(f"Ehi {nome}, compirai 100 anni nel {anno_del_centenario}!")
